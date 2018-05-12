@@ -14,15 +14,22 @@ public class Starter {
     private static char[] AMOUNTZ = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
 
 
-    // should be move to DefaultReductionFunction
+    // should be moved to DefaultReductionFunction
     public String reduction(String hashValue, int step) {
         BigInteger h = new BigInteger(hashValue, 16); //umwandlung
         h = h.add(BigInteger.valueOf(step));
+        String result = "";
+        BigInteger x;
         for (int i = 1; i < PWLENGHT; i++) {
+            x = h.mod(BigInteger.valueOf(AMOUNTZ.length));//x = H mod 36
+            h = h.divide(BigInteger.valueOf(AMOUNTZ.length));
+
+            return result;
 
         }
         return null;
     }
+
 
     public static String getMD5(String input) {
         try {
@@ -39,6 +46,8 @@ public class Starter {
             throw new RuntimeException(e);
         }
     }
+
+
 
     public static void main(String[] args) {
 
