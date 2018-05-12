@@ -1,5 +1,6 @@
 import reduction.ReductionFunction;
 
+import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.util.HashMap;
 import java.util.List;
@@ -28,6 +29,10 @@ public class RainbowTable {
     // does not search backwards yet
     public String get(String start) {
         return values.get(start);
+    }
+
+    public String getPassword(BigInteger hash) {
+        return null;
     }
 
 }
