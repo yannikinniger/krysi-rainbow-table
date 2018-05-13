@@ -15,6 +15,6 @@ public interface ReductionFunction {
      * @param length Length of the reduced String
      * @return
      */
-    public String reduce(BigInteger hash, BigInteger level, char[] possibleChars, int length);
+    public String reduce(BigInteger hash, int level, char[] possibleChars, int length);
 
 }

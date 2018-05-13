@@ -19,7 +19,7 @@ public class ReductionFunctionTest {
         char[] possibleChars = {'a', 'b', 'c', 'd', 'e'};
 
         String expected = "dea";
-        String result = reductionFunction.reduce(hash, BigInteger.ZERO, possibleChars, passwordLength);
+        String result = reductionFunction.reduce(hash, 0, possibleChars, passwordLength);
         assertEquals(expected, result);
     }
 
