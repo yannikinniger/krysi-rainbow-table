@@ -18,16 +18,17 @@ public class Starter {
     public String reduction(String hashValue, int step) {
         BigInteger h = new BigInteger(hashValue, 16); //umwandlung
         h = h.add(BigInteger.valueOf(step));
-        String result = "";
         BigInteger x;
+        String result = "";
         for (int i = 1; i < PWLENGHT; i++) {
             x = h.mod(BigInteger.valueOf(AMOUNTZ.length));//x = H mod 36
+            result = x.toString();    // KOMMENTAR: will ausgeben welche Zahl/Nummer aus AMOUNTZ x ist. also z.B. falls x = 10 ergibt dann ist es 'a'
+          //  result = AMOUNTZ[x];          Kommentar: versuchte 2 Varianten aber scheint nicht zu stimmen.
             h = h.divide(BigInteger.valueOf(AMOUNTZ.length));
 
-            return result;
-
         }
-        return null;
+        return result;
+
     }
 
 
